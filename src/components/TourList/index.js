@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './TourList.scss';
-import Tour from '../Tour/Tour'
-import {tourData} from '../tourData'
+import Tour from '../Tour/Tour';
+import {tourData} from '../tourData';
+import TourFunc from '../Tour/TourFunc';
+import FlipMove from "react-flip-move";
 
 import './TourList.scss'
 export default class TourList extends Component {
@@ -18,16 +20,18 @@ removeTour = id => {
     render() {
         const {tours} = this.state;
         return (
-            <section className="tourlist">
-               {tours.map(tour => {
-                   return (
-                       <Tour 
-                       key={tour.id} 
-                       tour={tour}
-                       removeTour={this.removeTour}
-                       />
-                   )
-               })}
+            <section >
+                <FlipMove className="tourlist">
+                    {tours.map(tour => {
+                        return (
+                            <TourFunc 
+                            key={tour.id} 
+                            tour={tour}
+                            removeTour={this.removeTour}
+                            />
+                        )
+                    })}
+               </FlipMove>
             </section>
         );
     }
