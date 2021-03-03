@@ -1,0 +1,29 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cabin:ital@1&display=swap');
+
+*{
+  font-family: 'Cabin', sans-serif;
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //zmienia, ze jak element jest 200x200 i dodamy padding to bedzie wiekszy
+}
+
+$mainBlack: #222;
+$mainGreen: #82b340;
+$mainWhite: #fff;
+$mainGrey: #eceece;
+$mainOrange: rgb(222, 137, 74);
+$mainBlue: #b5d2de;
+
+body {
+  background: $mainWhite;
+  color: $mainBlack;
+  font-family: 'Cabin', sans-serif;
+}
+
+
+
+
